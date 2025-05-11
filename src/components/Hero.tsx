@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "@/common/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -12,30 +12,30 @@ interface FormData {
 }
 export default function Hero() {
   // const [selectedValue, setSelectedValue] = useState("");
-  const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    projectType: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    success: boolean;
-    message: string;
-  } | null>(null);
+  // const [formData, setFormData] = useState<FormData>({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   projectType: "",
+  //   message: "",
+  // });
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [submitStatus, setSubmitStatus] = useState<{
+  //   success: boolean;
+  //   message: string;
+  // } | null>(null);
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (
+  //   e: React.ChangeEvent<
+  //     HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+  //   >
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  // };
 
   const continuousUpAnimation = {
     initial: { y: 0 },
@@ -49,49 +49,49 @@ export default function Hero() {
     },
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitStatus(null);
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+  //   try {
+  //     const response = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      const result = await response.json();
+  //     const result = await response.json();
 
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to send message");
-      }
+  //     if (!response.ok) {
+  //       throw new Error(result.error || "Failed to send message");
+  //     }
 
-      setSubmitStatus({
-        success: true,
-        message: result.message,
-      });
+  //     setSubmitStatus({
+  //       success: true,
+  //       message: result.message,
+  //     });
 
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        projectType: "",
-        message: "",
-      });
-    } catch (error) {
-      setSubmitStatus({
-        success: false,
-        message:
-          error instanceof Error ? error.message : "An unknown error occurred",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //     // Reset form
+  //     setFormData({
+  //       firstName: "",
+  //       lastName: "",
+  //       email: "",
+  //       projectType: "",
+  //       message: "",
+  //     });
+  //   } catch (error) {
+  //     setSubmitStatus({
+  //       success: false,
+  //       message:
+  //         error instanceof Error ? error.message : "An unknown error occurred",
+  //     });
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
   //   setSelectedValue(e.target.value);
   // };
 
