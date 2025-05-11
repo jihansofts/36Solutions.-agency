@@ -1,9 +1,6 @@
 "use client";
-import Creation from "@/components/Creation";
-import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Packge from "@/components/Packge";
 import Portfolio from "@/components/Portfolio";
 import Review from "@/components/Review";
 import Satisfaction from "@/components/Satisfaction";
@@ -17,11 +14,8 @@ export default function Home() {
       <Hero />
       <Portfolio />
       <Services />
-      {/* <Creation /> */}
-      {/* <Packge /> */}
       <Satisfaction />
       <Review />
-      {/* <Faq /> */}
       <Footer />
     </main>
   );
