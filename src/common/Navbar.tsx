@@ -45,7 +45,7 @@ export default function Navbar() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems]);
 
   // Update active link when menu opens
   useEffect(() => {

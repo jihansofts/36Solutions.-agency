@@ -3,13 +3,6 @@ import Navbar from "@/common/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  projectType: string;
-  message: string;
-}
 export default function Hero() {
   // const [selectedValue, setSelectedValue] = useState("");
   // const [formData, setFormData] = useState<FormData>({
@@ -37,17 +30,17 @@ export default function Hero() {
   //   }));
   // };
 
-  const continuousUpAnimation = {
-    initial: { y: 0 },
-    animate: {
-      y: "-100%", // Moves up by its own height
-      transition: {
-        duration: 10, // Adjust duration as needed
-        repeat: Infinity,
-        ease: "linear", // Constant speed
-      },
-    },
-  };
+  // const continuousUpAnimation = {
+  //   initial: { y: 0 },
+  //   animate: {
+  //     y: "-100%", // Moves up by its own height
+  //     transition: {
+  //       duration: 10, // Adjust duration as needed
+  //       repeat: Infinity,
+  //       ease: "linear", // Constant speed
+  //     },
+  //   },
+  // };
 
   // const handleSubmit = async (e: React.FormEvent) => {
   //   e.preventDefault();
