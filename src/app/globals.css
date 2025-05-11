@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* app/globals.css */
+@layer {
+  @font-face {
+    font-family: "Sharp Grotesk";
+    src: url("/fonts/SharpGrotesk-Medium20.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Sharp Grotesk";
+    src: url("/fonts/SharpGrotesk-SemiBold25.woff2") format("woff2");
+    font-weight: 600;
+    font-style: bold;
+    font-display: swap;
+  }
+}
+:root {
+  --gradient-main: linear-gradient(180deg, #8b55ff 0%, #433199 100%);
+}
+@theme {
+  --font-family-sans: "Sharp Grotesk", sans-serif; /* Fixed variable name */
+  --font-family-mono: "Roboto Mono", monospace;
+  /* Your color variables */
+  --color-background: #001241;
+  --color-bg-secondary: #d7fff7;
+
+  --color-text: #171717;
+  --color-text-secondary: #4a4b54;
+  --color-menu: #241b37;
+  --color-menu-secondary: #2f2741;
+  /* ... other color variables */
+}
+
+body {
+  font-family: var(--font-family-sans); /* Applied globally */
+}
