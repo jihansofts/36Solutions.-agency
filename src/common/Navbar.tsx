@@ -114,7 +114,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/">
         <h4 className="text-[16px] md:text-[28px] sm:text-[24px] text-white font-bold uppercase">
-          36 <span className="text-[#6F51FF]">Solutions</span>.
+          36 Web<span className="text-[#6F51FF]">Solutions</span>.
         </h4>
       </Link>
 

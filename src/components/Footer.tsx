@@ -35,7 +35,7 @@ export default function Footer() {
             {/* Left Info */}
             <div className="md:w-1/3 text-left">
               <h4 className="text-[16px] md:text-[28px] sm:text-[24px] text-white font-bold uppercase">
-                36 <span className="text-[#6F51FF]">Solutions</span>.
+                36 Web<span className="text-[#6F51FF]">Solutions</span>.
               </h4>
               <p className="text-[#A3A3A3] text-[18px] font-mono mt-5">
                 Launch your online presence with a complete web design and
