@@ -72,19 +72,21 @@ export default function Services() {
         </div>
       </div>
       <div className="bg-bg-secondary text-center py-16">
-        <CardMenu />
-        <div className="mt-5">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.9 }}
-            className="space-x-4 mx-auto">
-            <button
-              // onClick={() => window.open("tel:+1424323-8570")}
-              className="text-[14px] mx-auto uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors">
-              Send Custom Request
-            </button>
-          </motion.div>
+        <div className="container mx-auto px-5">
+          <CardMenu />
+          <div className="mt-5">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.9 }}
+              className="space-x-4 mx-auto">
+              <button
+                // onClick={() => window.open("tel:+1424323-8570")}
+                className="text-[14px] mx-auto uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors">
+                Send Custom Request
+              </button>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
