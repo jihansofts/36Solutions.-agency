@@ -1,7 +1,6 @@
 // app/layout.tsx
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import ZoomInfoTracking from "@/components/ZoomInfoTracking";
 
 const robotoMono = Roboto_Mono({
   weight: ["400", "500", "600", "700"],
@@ -16,10 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${robotoMono.variable}`}>
-      <body>
-        <ZoomInfoTracking />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
