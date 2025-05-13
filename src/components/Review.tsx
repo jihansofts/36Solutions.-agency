@@ -105,7 +105,7 @@ export default function Review() {
       username: "ruiassis999",
       country: "Portugal",
       comment:
-        "Excellent original image creator. Consistently I'm able to voice an idea and MybusinessIdea is able to turn it into something an image that I'm amazed by. I highly recommend 36 WebSolutions",
+        "Excellent original image creator. Consistently I'm able to voice an idea and 36 WebSolutions is able to turn it into something an image that I'm amazed by. I highly recommend 36 WebSolutions",
       countryCode: "pt",
     },
     {
