@@ -79,7 +79,7 @@ export default function Footer() {
                   window.open(`mailto:emailnextech@gmail.com`, "_blank")
                 }
                 className="text-[#A3A3A3] text-[18px] font-mono mt-5 cursor-pointer hover:text-[#804FEF]">
-                emailnextech@gmail.com
+                skrifat2665@gmail.com
               </p>
               <p
                 // onClick={() =>

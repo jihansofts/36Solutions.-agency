@@ -14,13 +14,13 @@ const serviceData: Service[] = [
     id: 1,
     name: "Social Media Marketing",
     icon: "/images/service1.svg",
-    dec: "At Allmybusinessidea, we offer expert social media services to help your brand grow and engage with your audience effectively.",
+    dec: "At 36 WebSolutions, we offer expert social media services to help your brand grow and engage with your audience effectively.",
   },
   {
     id: 2,
     name: "Business Consulting",
     icon: "/images/service2.svg",
-    dec: "At Allmybusinessidea, we provide expert business consulting to help you optimize strategies, increase efficiency, and drive growth for your company.",
+    dec: "At 36 WebSolutions, we provide expert business consulting to help you optimize strategies, increase efficiency, and drive growth for your company.",
   },
   {
     id: 3,

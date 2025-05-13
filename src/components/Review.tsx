@@ -97,7 +97,7 @@ export default function Review() {
       username: "jacobfreedom",
       country: "Czech Republic",
       comment:
-        "Loved working with MybusinessIdea, With having a team behind the project they made their work very easy to deal with. I recommended them to many of my team with their own personal Projects. Thank you very much!",
+        "Loved working with 36 WebSolutions, With having a team behind the project they made their work very easy to deal with. I recommended them to many of my team with their own personal Projects. Thank you very much!",
       countryCode: "cz",
     },
     {
@@ -105,7 +105,7 @@ export default function Review() {
       username: "ruiassis999",
       country: "Portugal",
       comment:
-        "Excellent original image creator. Consistently I'm able to voice an idea and MybusinessIdea is able to turn it into something an image that I'm amazed by. I highly recommend MybusinessIdea.",
+        "Excellent original image creator. Consistently I'm able to voice an idea and MybusinessIdea is able to turn it into something an image that I'm amazed by. I highly recommend 36 WebSolutions",
       countryCode: "pt",
     },
     {
@@ -145,7 +145,7 @@ export default function Review() {
       username: "mjmagett",
       country: "United States",
       comment:
-        "MybusinessIdea is always great to work with. I've been a continuing client for years and will keep coming back.",
+        "36 WebSolutions is always great to work with. I've been a continuing client for years and will keep coming back.",
       countryCode: "us",
     },
     {
