@@ -143,12 +143,9 @@ export default function Navbar() {
 
         <motion.button
           whileTap={{ scale: 0.95 }}
-          // onClick={() =>
-          //   window.open(
-          //     "https://calendly.com/allie-allmybusinessideas/30min",
-          //     "_blank"
-          //   )
-          // }
+          onClick={() =>
+            window.open("https://forms.gle/YrPq67UWjrUNi5ZH9", "_blank")
+          }
           className="text-[14px] py-3 cursor-pointer rounded-xl px-4 text-white uppercase font-semibold bg-gradient-to-t from-[#433199] to-[#8b55ff]">
           Place Order
         </motion.button>

@@ -143,7 +143,12 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.9 }}
                     className="space-x-4">
                     <button
-                      // onClick={() => window.open("tel:+1424323-8570")}
+                      onClick={() =>
+                        window.open(
+                          "https://forms.gle/YrPq67UWjrUNi5ZH9",
+                          "_blank"
+                        )
+                      }
                       className="text-[14px] uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors">
                       Place Order
                     </button>
