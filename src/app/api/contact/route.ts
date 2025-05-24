@@ -5,8 +5,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, projectType, message } =
-      await req.json();
+    const { firstName, email, phone, message } = await req.json();
 
     // Validate required fields
     if (!email || !message) {
@@ -25,14 +24,14 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"Allmybusinessidea Form Client" <${email}>`,
-      to: "allie@allmybusinessideas.com",
-      subject: `New Contact: ${projectType}`,
+      from: `"36wbsolutions Form Client" <${email}>`,
+      to: "shakhari2665@gmail.com",
+      // to: "36websolutions@gmail.com",
       html: `
         <h2>Contact Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Name:</strong> ${firstName}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Project:</strong> ${projectType}</p>
+        <p><strong>Number:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
     });

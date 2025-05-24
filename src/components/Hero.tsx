@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/common/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import FormPop from "@/common/FormPop";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
   // const [selectedValue, setSelectedValue] = useState("");
   // const [formData, setFormData] = useState<FormData>({
   //   firstName: "",
@@ -143,12 +145,7 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.9 }}
                     className="space-x-4">
                     <button
-                      onClick={() =>
-                        window.open(
-                          "https://forms.gle/YrPq67UWjrUNi5ZH9",
-                          "_blank"
-                        )
-                      }
+                      onClick={() => setIsOpen(true)}
                       className="text-[14px] uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors">
                       Place Order
                     </button>
@@ -169,6 +166,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      {isOpen && <FormPop onClose={() => setIsOpen(false)} />}
     </section>
   );
 }
