@@ -77,11 +77,11 @@ export default function FormPop({ onClose }: Props) {
     }
   };
   return (
-    <div className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 flex items-start justify-center z-50 lg:p-2 md:p-4 sm:p-6 p-6  overflow-y-auto ">
+    <div className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 z-100 flex items-start justify-center  lg:p-2 md:p-4 sm:p-6 p-6  lg:overflow-y-hidden overflow-y-auto md:overflow-y-auto ">
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="fixed cursor-pointer top-4 right-4 text-gray-500 hover:text-gray-700 bg-white rounded-full p-1 z-50 shadow-md">
+        className="fixed cursor-pointer top-4 right-4 text-gray-500 hover:text-gray-700 bg-white rounded-full p-1 z-100 shadow-md">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
