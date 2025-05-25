@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import FormPop from "./FormPop";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +70,7 @@ export default function Navbar() {
         }
       }
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, navItems]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id.toLowerCase());
@@ -87,6 +89,7 @@ export default function Navbar() {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
+        setIsOpen(false);
       }
     };
 
@@ -143,9 +146,7 @@ export default function Navbar() {
 
         <motion.button
           whileTap={{ scale: 0.95 }}
-          onClick={() =>
-            window.open("https://forms.gle/YrPq67UWjrUNi5ZH9", "_blank")
-          }
+          onClick={() => setIsOpen(true)}
           className="text-[14px] py-3 cursor-pointer rounded-xl px-4 text-white uppercase font-semibold bg-gradient-to-t from-[#433199] to-[#8b55ff]">
           Place Order
         </motion.button>
@@ -207,15 +208,17 @@ export default function Navbar() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                window.open("https://forms.gle/YrPq67UWjrUNi5ZH9", "_blank")
-              }
+              onClick={() => {
+                setIsOpen(true);
+                setIsMenuOpen(false);
+              }}
               className="text-lg py-3 cursor-pointer rounded-xl px-6 text-white uppercase font-semibold bg-gradient-to-t from-[#433199] to-[#8b55ff] mt-4">
               Place Order
             </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
+      {isOpen && <FormPop onClose={() => setIsOpen(false)} />}
     </nav>
   );
 }
