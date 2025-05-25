@@ -96,7 +96,7 @@ export default function Navbar({ setIsOpen }: Props) {
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [navRef, setIsOpen]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
