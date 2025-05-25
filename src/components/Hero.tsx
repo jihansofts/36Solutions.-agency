@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "@/common/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import FormPop from "@/common/FormPop";
 
-export default function Hero() {
-  const [isOpen, setIsOpen] = useState(false);
+interface Props {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export default function Hero({ setIsOpen }: Props) {
   return (
     <section id="home" className="relative w-full min-h-screen  pt-[30px]">
       {/* Background Image */}
@@ -24,7 +25,7 @@ export default function Hero() {
       {/* Content */}
       <div className="container mx-auto relative z-10 min-h-screen flex flex-col overflow-visible">
         {/* Navbar */}
-        <Navbar />
+        <Navbar setIsOpen={setIsOpen} />
 
         {/* Hero Main Grid */}
         <div className=" z-20 flex items-center justify-center px-4 sm:px-6 py-30">
@@ -82,7 +83,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      {isOpen && <FormPop onClose={() => setIsOpen(false)} />}
     </section>
   );
 }

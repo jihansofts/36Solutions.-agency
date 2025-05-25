@@ -1,10 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import FormPop from "./FormPop";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+interface Props {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export default function Navbar({ setIsOpen }: Props) {
   const [activeLink, setActiveLink] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -209,8 +210,8 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                setIsOpen(true);
                 setIsMenuOpen(false);
+                setIsOpen(true);
               }}
               className="text-lg py-3 cursor-pointer rounded-xl px-6 text-white uppercase font-semibold bg-gradient-to-t from-[#433199] to-[#8b55ff] mt-4">
               Place Order
@@ -218,7 +219,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-      {isOpen && <FormPop onClose={() => setIsOpen(false)} />}
     </nav>
   );
 }

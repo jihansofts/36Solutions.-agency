@@ -17,6 +17,9 @@
     font-style: bold;
     font-display: swap;
   }
+  .zIndex {
+    z-index: 1000;
+  }
 }
 :root {
   --gradient-main: linear-gradient(180deg, #8b55ff 0%, #433199 100%);
