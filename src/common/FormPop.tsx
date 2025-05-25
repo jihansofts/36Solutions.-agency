@@ -77,7 +77,7 @@ export default function FormPop({ onClose }: Props) {
     }
   };
   return (
-    <div className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 flex items-start justify-center z-50 p-2 ">
+    <div className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 flex items-start justify-center z-50 lg:p-2 md:p-4 sm:p-6 p-6  overflow-y-auto ">
       {/* Close Button */}
       <button
         onClick={onClose}
