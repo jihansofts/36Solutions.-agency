@@ -148,7 +148,7 @@ export default function Navbar({ setIsOpen }: Props) {
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(true)}
           className="text-[14px] py-3 cursor-pointer rounded-xl px-4 text-white uppercase font-semibold bg-gradient-to-t from-[#433199] to-[#8b55ff]">
-          Place Order
+          Request Service
         </motion.button>
       </div>
 
