@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import CardMenu from "./CardMenu";
+import FormPop from "@/common/FormPop";
 import { motion } from "framer-motion";
 
 interface Service {
@@ -36,6 +37,7 @@ const serviceData: Service[] = [
   },
 ];
 export default function Services() {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <section id="services" className="bg-white">
       <div className="container mx-auto py-20 px-5">
@@ -81,9 +83,7 @@ export default function Services() {
               transition={{ duration: 1, delay: 0.9 }}
               className="space-x-4 mx-auto">
               <button
-                onClick={() =>
-                  window.open("https://forms.gle/YrPq67UWjrUNi5ZH9", "_blank")
-                }
+                onClick={() => setIsOpen(true)}
                 className="text-[14px] mx-auto uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors">
                 Send Custom Request
               </button>
@@ -91,6 +91,7 @@ export default function Services() {
           </div>
         </div>
       </div>
+      {isOpen && <FormPop onClose={() => setIsOpen(false)} />}
     </section>
   );
 }

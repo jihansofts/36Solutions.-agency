@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/common/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import FormPop from "@/common/FormPop";
 
-interface Props {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-export default function Hero({ setIsOpen }: Props) {
+export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="home" className="relative w-full min-h-screen  pt-[30px]">
       {/* Background Image */}
@@ -46,13 +46,14 @@ export default function Hero({ setIsOpen }: Props) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3 }}
                   className="font-mono max-w-7xl text-center mx-auto text-[18px] sm:text-lg md:text-[18px] lg:text-[#A3A3A3] md:text-[#A3A3A3] sm:text-white text-white mt-7">
-                  Get a professionally designed mobile responsive and fully
-                  functional website for just $36 — including a free domain name
-                  and hosting. Perfect for small businesses, start ups,
-                  freelancers, and personal brands looking to make a powerful
-                  online presence without breaking the bank. Fast delivery,
-                  mobile-friendly design, and SEO-ready — everything you need to
-                  get started!
+                  Get a professionally designed, mobile-responsive, and
+                  SEO-ready website for just $36 — designed by real UI/UX
+                  designers and built by expert developers, not templates. After
+                  setup, your site is fully managed through a $36/month
+                  subscription that includes hosting, domain renewal, ongoing
+                  updates, bug fixes, and support. Perfect for small businesses,
+                  freelancers, and startups who want a strong online presence
+                  without the hassle.
                 </motion.p>
 
                 <div className="mt-10 sm:flex-col space-x-4">
@@ -64,7 +65,7 @@ export default function Hero({ setIsOpen }: Props) {
                     <button
                       onClick={() => setIsOpen(true)}
                       className="text-[14px] uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors">
-                      Place Order
+                      Request Service
                     </button>
                   </motion.div>
                 </div>
@@ -83,6 +84,7 @@ export default function Hero({ setIsOpen }: Props) {
           </div>
         </div>
       </div>
+      {isOpen && <FormPop onClose={() => setIsOpen(false)} />}
     </section>
   );
 }

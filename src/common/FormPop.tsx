@@ -76,8 +76,13 @@ export default function FormPop({ onClose }: Props) {
       setIsSubmitting(false);
     }
   };
+  // const handleFormClick = (e: React.MouseEvent) => {
+  //   e.stopPropagation();
+  // };
   return (
-    <div className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 zIndex flex items-start justify-center  lg:p-2 md:p-4 sm:p-6 p-6   overflow-y-auto md:overflow-y-auto  ">
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 zIndex flex items-start justify-center  lg:p-2 md:p-4 sm:p-6 p-6   overflow-y-auto md:overflow-y-auto  ">
       {/* Close Button */}
       <button
         onClick={onClose}
@@ -99,16 +104,20 @@ export default function FormPop({ onClose }: Props) {
 
       {/* Modal Content */}
       <motion.div
+        onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className="w-full max-w-[600px] mx-auto my-0">
         <div className="relative w-full bg-[url('/images/bginputbox.png')] bg-no-repeat bg-cover bg-center rounded-4xl p-6 sm:p-10">
           {/* Heading */}
-          <h5 className="text-white text-center text-lg sm:text-2xl md:text-[32px] font-mono font-bold mb-6">
-            Ready to increase your business with our website?
+          <h5 className="text-white text-center text-lg sm:text-2xl md:text-[24px] font-mono font-bold mb-6">
+            Let’s Build Your Custom Website
           </h5>
-
+          <span className="text-white text-center text-[12px] sm:text-[16px] md:text-[18px] font-mono mb-4 block">
+            Tell us a bit about your business, and we’ll get back to you within
+            24 hours.
+          </span>
           {/* Form */}
           <form
             onSubmit={handleSubmit}
@@ -118,7 +127,7 @@ export default function FormPop({ onClose }: Props) {
               <label
                 htmlFor="firstName"
                 className="text-[#262626] font-mono text-[16px]">
-                Name
+                Full Name
               </label>
               <input
                 id="firstName"
@@ -155,12 +164,12 @@ export default function FormPop({ onClose }: Props) {
               <label
                 htmlFor="phone"
                 className="text-[#262626] font-mono text-[16px]">
-                Phone Number
+                Phone Number (optional but recommended)
               </label>
               <input
                 id="phone"
                 name="phone"
-                type="number"
+                type="tel"
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+1 212 555 4567"
@@ -173,14 +182,14 @@ export default function FormPop({ onClose }: Props) {
               <label
                 htmlFor="message"
                 className="text-[#262626] font-mono text-[16px]">
-                Tell us about your business
+                Tell us briefly what your business does
               </label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Hello 36web solutions, I need your help with..."
+                placeholder="Ex: “I run a mobile detailing service in Atlanta”"
                 required
                 className="w-full border-b text-black border-[#E9E9E9] px-4 py-3 placeholder-[#B7B8BE]"
                 rows={5}
@@ -189,8 +198,8 @@ export default function FormPop({ onClose }: Props) {
 
             {/* Checklist Info */}
             <div className="space-y-2 pt-2">
-              <p className="text-[#262626] font-mono text-[16px] font-semibold">
-                Your website will include these sections
+              <p className="text-[#262626] font-mono text-[12px] font-regular">
+                Included in Your Website:
               </p>
               <div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
@@ -204,7 +213,7 @@ export default function FormPop({ onClose }: Props) {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-2 text-[#262626] font-mono text-[12px]">
+                      className="flex items-center gap-2 text-[#262626] font-mono font-regular text-[12px]">
                       <FaCheckCircle className="text-green-600" />
                       {item}
                     </div>
@@ -212,18 +221,19 @@ export default function FormPop({ onClose }: Props) {
                 </div>
               </div>
 
-              <p className="text-[#262626] font-mono text-[16px]">
-                You can add more new and custom sections, but that will cost you
-                extra
+              <p className="text-[#262626] font-mono text-[12px]">
+                <strong>Want more features or pages?</strong> We offer custom
+                add-ons like booking forms, newsletter integration, and
+                e-commerce — just let us know what you need.
               </p>
             </div>
 
             {/* Footer & Button */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
-              <div className="sm:w-[260px]">
-                <p className="text-[14px] text-[#B7B8BE] font-mono">
-                  After you fill out the form and send message we will reach out
-                  to you
+              <div className="sm:w-[280px]">
+                <p className="text-[10px] text-[#B7B8BE] font-mono">
+                  After you submit the form, we’ll review your request and
+                  contact you via email to get started.
                 </p>
               </div>
               <button

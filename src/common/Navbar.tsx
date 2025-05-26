@@ -90,13 +90,12 @@ export default function Navbar({ setIsOpen }: Props) {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
-        setIsOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [navRef, setIsOpen]);
+  }, [navRef]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -214,7 +213,7 @@ export default function Navbar({ setIsOpen }: Props) {
                 setIsOpen(true);
               }}
               className="text-lg py-3 cursor-pointer rounded-xl px-6 text-white uppercase font-semibold bg-gradient-to-t from-[#433199] to-[#8b55ff] mt-4">
-              Place Order
+              Request Service
             </motion.button>
           </motion.div>
         )}
