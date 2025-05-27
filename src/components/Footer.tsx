@@ -40,8 +40,8 @@ export default function Footer() {
               <p className="text-[#A3A3A3] text-[18px] font-mono mt-5">
                 Launch your online presence with a complete web design and
                 development package for just $36! This offer includes a
-                custom-designed website, domain registration, and 1 year of
-                fast, secure hosting.
+                custom-designed website, domain registration, and fast, secure
+                hosting with complete website management.
               </p>
             </div>
             <div className="md:w-1/4 sm:w-1/2 w-0"></div>

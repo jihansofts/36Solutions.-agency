@@ -9,29 +9,24 @@ export default function Faq() {
 
   const faqs: { question: string; answer: string }[] = [
     {
-      question: "Do you redesign a website or mobile apps as well ?",
+      question: "What’s included in the $36/month subscription?",
       answer:
-        "Yes, we can redesign your website or mobile apps as well. We have a team of designers and developers who can bring your vision to life. ",
-    },
-    // {
-    //   question: "Do you redesign a website or mobile apps as well ?",
-    //   answer:
-    //     "Yes, we can redesign your website or mobile apps as well. We have a team of designers and developers who can bring your vision to life. ",
-    // },
-    {
-      question: "How much does a website design or development project cost?",
-      answer:
-        " The cost of a website design or development project can vary depending on the complexity and scope of the project. We provide a detailed estimate based on the project requirements and timeline.",
+        "Your monthly subscription covers everything you need to keep your site running smoothly: Hosting Domain name renewal Bug fixes Quick content updates Ongoing performance monitoring Support when you need it",
     },
     {
-      question: "Can you create a website or mobile app for me ?",
+      question: "Can I add more pages later?",
       answer:
-        "Yes, we can create a website or mobile app for you. We have a team of designers and developers who can bring your vision to life. ",
+        "Yes! We offer additional pages and features as add-ons. You can grow your site at any time — and your $36/month subscription stays the same. ",
     },
     {
-      question:
-        "Will I be able to make changes to the website after it's launched?",
-      answer: "Yes, You will be able to make small changes.",
+      question: "Is it really custom, or do you use templates?",
+      answer:
+        "Every site we build is 100% custom — designed from scratch based on your brand, content, and goals. No cookie-cutter templates or drag-and-drop builders.",
+    },
+    {
+      question: "What exactly do I get for $36?",
+      answer:
+        "You get a custom-designed, one-page website built by real UI/UX designers and developers — no templates. Your site will be mobile-responsive, SEO-ready, and delivered within 48 hours of receiving your info.",
     },
     // {
     //   question:
@@ -54,7 +49,7 @@ export default function Faq() {
             Frequently asked questions
           </h1>
           <p className="text-[16px] mt-3 text-[#4A4B54]">
-            Frequently asked questions about our platform
+            We&apos;re here to support your journey.
           </p>
         </motion.div>
 
