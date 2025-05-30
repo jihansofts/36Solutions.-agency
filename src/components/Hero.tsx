@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Navbar from "@/common/Navbar";
 import Image from "next/image";

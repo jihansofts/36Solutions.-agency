@@ -1,3 +1,4 @@
+"use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export default function Navbar({ setIsOpen }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
-  const navItems = ["Home", "Portfolio", "Services", "About"];
+  const navItems = ["Home", "Portfolio", "Services", "About"] ;
 
   // Track scroll position and active section
   useEffect(() => {
