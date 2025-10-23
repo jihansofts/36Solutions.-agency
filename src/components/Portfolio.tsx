@@ -129,7 +129,7 @@ export default function Portfolio() {
                 initial={{ scale: 0.95, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.95, y: 20 }}
-                className="relative w-full max-w-6xl mx-4 mr-14 mt-20"
+                className="relative w-full max-w-6xl mx-4 lg:mr-14 md:mr-5 mt-20"
                 onClick={(e) => e.stopPropagation()}>
                 <button
                   className="absolute cursor-pointer -top-10 right-0 text-white text-2xl z-10 hover:text-[#8b55ff] transition-colors"
