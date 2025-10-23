@@ -109,9 +109,9 @@ export default function Portfolio() {
                   <h2 className="text-[18px] font-medium text-[#171717]">
                     {project.name}
                   </h2>
-                  <p className="text-[#A3A3A3] text-[12px] uppercase mt-2 font-semibold">
+                  {/* <p className="text-[#A3A3A3] text-[12px] uppercase mt-2 font-semibold">
                     {project.brand}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function Portfolio() {
                 className="relative w-full max-w-6xl mx-4 mr-14 mt-20"
                 onClick={(e) => e.stopPropagation()}>
                 <button
-                  className="absolute -top-10 right-0 text-white text-2xl z-10 hover:text-[#8b55ff] transition-colors"
+                  className="absolute cursor-pointer -top-10 right-0 text-white text-2xl z-10 hover:text-[#8b55ff] transition-colors"
                   onClick={() => setSelectedImage(null)}
                   aria-label="Close modal">
                   <FaTimes />

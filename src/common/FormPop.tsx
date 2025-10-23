@@ -85,6 +85,7 @@ export default function FormPop({ onClose }: Props) {
       className="fixed inset-0 bg-[#17102FBA] bg-opacity-30 zIndex flex items-start justify-center  lg:p-2 md:p-4 sm:p-6 p-6   overflow-y-auto md:overflow-y-auto  ">
       {/* Close Button */}
       <button
+        title="btn"
         onClick={onClose}
         className="fixed cursor-pointer top-4 right-4 text-gray-500 hover:text-gray-700 bg-white rounded-full p-1 z-100 shadow-md">
         <svg
